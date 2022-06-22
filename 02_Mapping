@@ -1,69 +1,69 @@
 USE GRAPH Community
 
 CREATE LOADING JOB load_job_claim FOR GRAPH Community {
-      DEFINE FILENAME v_claim;
-      LOAD v_claim TO VERTEX Claim VALUES($0, $1, $4, $6, $2) USING SEPARATOR=",", HEADER="false", EOL="\n";
+      DEFINE FILENAME claim;
+      LOAD claim TO VERTEX Claim VALUES($0, $1, $4, $6, $2) USING SEPARATOR=",", HEADER="false", EOL="\n";
     }
 
 set exit_on_error = "true"
 set exit_on_error = "false"
 CREATE LOADING JOB load_job_claim_associated_with_patient FOR GRAPH Community {
-      DEFINE FILENAME v_claim_associated_with_patient;
-      LOAD v_claim_associated_with_patient TO EDGE associated VALUES($0, $1) USING SEPARATOR=",", HEADER="false", EOL="\n";
+      DEFINE FILENAME claim_associated_with_patient;
+      LOAD claim_associated_with_patient TO EDGE associated VALUES($0, $1) USING SEPARATOR=",", HEADER="false", EOL="\n";
     }
 
 set exit_on_error = "true"
 set exit_on_error = "false"
-CREATE LOADING JOB load_job_specialties-subspecialties FOR GRAPH Community {
-      DEFINE FILENAME v_specialties-subspecialties;
-      LOAD v_specialties-subspecialties TO EDGE specialty-subspecialty VALUES($0, $1) USING SEPARATOR=",", HEADER="false", EOL="\n";
+CREATE LOADING JOB load_job_specialties_subspecialties FOR GRAPH Community {
+      DEFINE FILENAME specialties_subspecialties;
+      LOAD specialties_subspecialties TO EDGE specialty_subspecialty VALUES($0, $1) USING SEPARATOR=",", HEADER="false", EOL="\n";
     }
 
 set exit_on_error = "true"
 set exit_on_error = "false"
 CREATE LOADING JOB load_job_claim_associated_with_patient FOR GRAPH Community {
-      DEFINE FILENAME v_claim_associated_with_patient;
-      LOAD v_claim_associated_with_patient TO EDGE associated VALUES($0, $1) USING SEPARATOR=",", HEADER="true", EOL="\n";
+      DEFINE FILENAME claim_associated_with_patient;
+      LOAD claim_associated_with_patient TO EDGE associated VALUES($0, $1) USING SEPARATOR=",", HEADER="true", EOL="\n";
     }
 
 set exit_on_error = "true"
 set exit_on_error = "false"
 CREATE LOADING JOB load_job_claim FOR GRAPH Community {
-      DEFINE FILENAME v_claim;
-      LOAD v_claim TO VERTEX Claim VALUES($0, $1, $4, $6, $2) USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double";
+      DEFINE FILENAME claim;
+      LOAD claim TO VERTEX Claim VALUES($0, $1, $4, $6, $2) USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double";
     }
 
 set exit_on_error = "true"
 set exit_on_error = "false"
-CREATE LOADING JOB load_job_specialties-subspecialties FOR GRAPH Community {
-      DEFINE FILENAME MyDataSource;
-      LOAD MyDataSource TO EDGE specialty_subspecialty VALUES($0, $1) USING SEPARATOR=",", HEADER="true", EOL="\n";
+CREATE LOADING JOB load_job_specialties_subspecialties FOR GRAPH Community {
+      DEFINE FILENAME specialties_subspecialties;
+      LOAD specialties_subspecialties TO EDGE specialty_subspecialty VALUES($0, $1) USING SEPARATOR=",", HEADER="true", EOL="\n";
     }
 
 set exit_on_error = "true"
 set exit_on_error = "false"
-CREATE LOADING JOB load_job_subspecialties-prescriber FOR GRAPH Community {
-      DEFINE FILENAME v_subspecialties-prescriber;
-      LOAD v_subspecialties-prescriber TO EDGE subspecialty_prescriber VALUES($1, $0) USING SEPARATOR=",", HEADER="true", EOL="\n";
+CREATE LOADING JOB load_job_subspecialties_prescriber FOR GRAPH Community {
+      DEFINE FILENAME subspecialties_prescriber;
+      LOAD subspecialties_prescriber TO EDGE subspecialty_prescriber VALUES($1, $0) USING SEPARATOR=",", HEADER="true", EOL="\n";
     }
 
 set exit_on_error = "true"
 set exit_on_error = "false"
 CREATE LOADING JOB load_job_claim_submitted_by_prescriber FOR GRAPH Community {
-      DEFINE FILENAME v_claim_submitted_by_prescriber;
-      LOAD v_claim_submitted_by_prescriber TO EDGE submitted_by VALUES($0, $1) USING SEPARATOR=",", HEADER="true", EOL="\n";
+      DEFINE FILENAME claim_submitted_by_prescriber;
+      LOAD claim_submitted_by_prescriber TO EDGE submitted_by VALUES($0, $1) USING SEPARATOR=",", HEADER="true", EOL="\n";
     }
 
 set exit_on_error = "true"
 set exit_on_error = "false"
 CREATE LOADING JOB load_job_moreno_kangaroo FOR GRAPH Community {
-      DEFINE FILENAME v_moreno_kangaroo;
-      LOAD v_moreno_kangaroo TO EDGE kanga_link VALUES($0, $1, $2) USING SEPARATOR=",", HEADER="true", EOL="\n";
+      DEFINE FILENAME moreno_kangaroo;
+      LOAD moreno_kangaroo TO EDGE kanga_link VALUES($0, $1, $2) USING SEPARATOR=",", HEADER="true", EOL="\n";
     }
 
 set exit_on_error = "true"
 set exit_on_error = "false"
 CREATE LOADING JOB load_job_flickrEdges FOR GRAPH Community {
-      DEFINE FILENAME v_flickrEdges;
-      LOAD v_flickrEdges TO EDGE flickr_link VALUES($0, $1) USING SEPARATOR=",", HEADER="true", EOL="\n";
+      DEFINE FILENAME flickrEdges;
+      LOAD flickrEdges TO EDGE flickr_link VALUES($0, $1) USING SEPARATOR=",", HEADER="true", EOL="\n";
     }
