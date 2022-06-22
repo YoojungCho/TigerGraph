@@ -14,4 +14,4 @@ CREATE DIRECTED EDGE referral(FROM Prescriber, TO Prescriber, num_patient INT DE
 CREATE UNDIRECTED EDGE kanga_link(FROM Kangaroo, TO Kangaroo, weight FLOAT)
 CREATE UNDIRECTED EDGE flickr_link(FROM FlickrImage, TO FlickrImage)
 
-CREATE GRAPH MyGraph(Specialty, SubSpecialty, Claim, Patient, Prescriber, Kangaroo, FlickrImage, associated, specialty_subspecialty, submitted_by, subspecialty_prescriber, referral, kanga_link, flickr_link)
+CREATE GRAPH Community(Specialty, SubSpecialty, Claim, Patient, Prescriber, Kangaroo, FlickrImage, associated, specialty_subspecialty, submitted_by, subspecialty_prescriber, referral, kanga_link, flickr_link)
