@@ -11,10 +11,10 @@ gsql -g Community "run loading job load_job_claim using
 v_claim=\"${Community_data_dir}/claim.csv\""
 
 gsql -g Community "run loading job load_job_claim_associated_with_patient using
-v_claim_associated_with_patient=\"${Community_data_dir}/claim_associated_with_patient.csv\""
+v_claim_associated_with_patient=\"${Community_data_dir}/claim associated with patient.csv\""
 
 gsql -g Community "run loading job load_job_claim_submitted_by_prescriber using
-v_claim_submitted_by_prescriber=\"${Community_data_dir}/claim_submitted_by_prescriber.csv\""
+v_claim_submitted_by_prescriber=\"${Community_data_dir}/claim submitted_by prescriber.csv\""
 
 gsql -g Community "run loading job load_job_flickrEdges using
 v_flickrEdges=\"${Community_data_dir}/flickrEdges.csv\""
