@@ -5,7 +5,7 @@ time = `date`
 echo $time
 
 ## PLEASE modify the line below to the directory where your raw file sits and remove the '#'
-# export LDBC_SNB_DATA_DIR=/home/tigergraph/ldbc_snb_data/social_network/
+# export LDBC_SNB_DATA_DIR=/home/tigergraph/03_SNS/ldbc_snb_data/social_network/
 
 
 #start all TigerGraph services
